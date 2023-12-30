@@ -11,6 +11,7 @@
 #include "util.h"
 #include "audio.h"
 #include "assets.h"
+
 ZeldaEnv g_zenv;
 uint8 g_ram[131072];
 
@@ -264,7 +265,7 @@ static void ZeldaRunGameLoop() {
 
 void ZeldaInitialize() {
   g_zenv.dma = dma_init(NULL);
-  g_zenv.ppu = ppu_init(NULL);
+  g_zenv.ppu = ppu_init();
   g_zenv.ram = g_ram;
   g_zenv.sram = (uint8*)calloc(8192, 1);
   g_zenv.vram = g_zenv.ppu->vram;

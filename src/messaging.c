@@ -16,6 +16,7 @@
 #include "attract.h"
 #include "nmi.h"
 #include "assets.h"
+#include "messaging.h"
 
 static void WorldMap_AddSprite(int spr, uint8 big, uint8 flags, uint8 ch, uint16 x, uint16 y);
 static bool WorldMap_CalculateOamCoordinates(Point16U *pt);
